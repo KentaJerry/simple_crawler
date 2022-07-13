@@ -27,4 +27,19 @@ defmodule SimpleCrawler do
    end
   end
 
+  def main(url) do
+    url_list = check_url([url])
+    get_page_text(url_list)
+  end
+
+  def check_url(url_list) do
+    all_url =Enum.uniq(url_list ++ get_url_list(url_list))
+
+    if all_url == url_list do
+      all_url
+    else
+      check_url(all_url)
+    end
+  end
+
 end

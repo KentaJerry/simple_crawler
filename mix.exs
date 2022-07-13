@@ -1,4 +1,4 @@
-1defmodule SimpleCrawler.MixProject do
+defmodule SimpleCrawler.MixProject do
   use Mix.Project
 
   def project do
